@@ -36,6 +36,7 @@ namespace DemoFree
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(x => { x.AllowAnyHeader(); x.AllowAnyMethod().AllowAnyOrigin(); });
             app.UseHttpsRedirection();
 
             app.UseRouting();
